@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 
-import { CONTENT_REPOSITORY } from 'src/core/constants';
-import { Content } from 'src/core/database/entities/content.entity';
+import { CONTENT_REPOSITORY } from '../../core/constants';
+import { Content } from '../../core/database/entities';
 
 @Injectable()
 export class ContentService {

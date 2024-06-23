@@ -1,7 +1,7 @@
 import { Controller, Get, Param, Query } from '@nestjs/common';
 
 import { JobService } from './job.service';
-import { Job } from 'src/core/database/entities/job.entity';
+import { Job } from '../../core/database/entities';
 
 @Controller('jobs')
 export class JobController {

@@ -1,7 +1,7 @@
-import { Controller, Get, Param, Query, Response } from '@nestjs/common';
+import { Controller, Get, Param, Query } from '@nestjs/common';
 
 import { ApplicationService } from './application.service';
-import { Application } from 'src/core/database/entities/application.entity';
+import { Application } from '../../core/database/entities';
 
 @Controller('applications')
 export class ApplicationController {
@@ -18,11 +18,5 @@ export class ApplicationController {
   @Get('get-all')
   async getAll(@Query('lang') lang: string): Promise<Application[]> {
     return await this.applicationService.getAllApplications(lang);
-  }
-
-  @Get('get-cv')
-  async getCv(@Query('lang') lang: string, @Response() res) {
-    res.setHeader('Content-Type', 'application/pdf');
-    res.send(await this.applicationService.getCv(lang));
   }
 }

@@ -1,4 +1,5 @@
 import { Column, DataType, HasMany, Model, Table } from 'sequelize-typescript';
+
 import { SkillsPerApplication } from './skillsPerApplication.entity';
 import { Link } from './link.entity';
 

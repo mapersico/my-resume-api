@@ -6,6 +6,7 @@ import {
   Model,
   Table,
 } from 'sequelize-typescript';
+
 import { Job } from './job.entity';
 import { Project } from './project.entity';
 
