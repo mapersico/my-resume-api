@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 
-import { SKILL_REPOSITORY } from 'src/core/constants';
-import { Skill } from 'src/core/database/entities/skill.entity';
+import { SKILL_REPOSITORY } from '../../core/constants';
+import { Skill } from '../../core/database/entities';
 
 @Injectable()
 export class SkillService {

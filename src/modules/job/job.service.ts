@@ -1,11 +1,13 @@
 import { Inject, Injectable } from '@nestjs/common';
 
-import { JOB_REPOSITORY } from 'src/core/constants';
-import { Job } from 'src/core/database/entities/job.entity';
-import { Position } from 'src/core/database/entities/position.entity';
-import { Project } from 'src/core/database/entities/project.entity';
-import { Skill } from 'src/core/database/entities/skill.entity';
-import { SkillsPerProject } from 'src/core/database/entities/skillsPerProject.entity';
+import { JOB_REPOSITORY } from '../../core/constants';
+import {
+  SkillsPerProject,
+  Skill,
+  Project,
+  Position,
+  Job,
+} from 'src/core/database/entities';
 
 @Injectable()
 export class JobService {

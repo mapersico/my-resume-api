@@ -1,6 +1,6 @@
 import { Column, DataType, HasMany, Model, Table } from 'sequelize-typescript';
 
-import { Language } from './language';
+import { Language } from './language.entity';
 import { Education } from './education.entity';
 import { Contact } from './contact.entity';
 

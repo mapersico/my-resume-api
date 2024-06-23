@@ -1,10 +1,12 @@
 import { Inject, Injectable } from '@nestjs/common';
 
-import { PROFILE_REPOSITORY } from 'src/core/constants';
-import { Contact } from 'src/core/database/entities/contact.entity';
-import { Education } from 'src/core/database/entities/education.entity';
-import { Language } from 'src/core/database/entities/language';
-import { Profile } from 'src/core/database/entities/profile.entity';
+import { PROFILE_REPOSITORY } from '../../core/constants';
+import {
+  Profile,
+  Language,
+  Education,
+  Contact,
+} from 'src/core/database/entities';
 
 @Injectable()
 export class ProfileService {

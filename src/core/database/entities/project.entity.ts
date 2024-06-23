@@ -6,6 +6,7 @@ import {
   Model,
   Table,
 } from 'sequelize-typescript';
+
 import { Position } from './position.entity';
 import { SkillsPerProject } from './skillsPerProject.entity';
 

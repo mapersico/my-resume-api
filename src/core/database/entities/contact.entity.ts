@@ -5,6 +5,7 @@ import {
   Model,
   Table,
 } from 'sequelize-typescript';
+
 import { Profile } from './profile.entity';
 
 @Table({

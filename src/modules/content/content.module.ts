@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 
-import { contentProviders } from '../../core/database/providers/content.providers';
-
+import { contentProviders } from '../../core/database/providers/content.provider';
 import { ContentService } from './content.service';
 import { ContentController } from './content.controller';
 
