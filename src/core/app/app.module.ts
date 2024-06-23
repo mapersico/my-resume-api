@@ -1,0 +1,26 @@
+import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
+
+import { DatabaseModule } from '../database/database.module';
+import { SkillModule } from 'src/modules/skill/skill.module';
+import { JobModule } from 'src/modules/job/job.module';
+import { ContentModule } from 'src/modules/content/content.module';
+import { ProfileModule } from 'src/modules/profile/profile.module';
+import { ApplicationModule } from 'src/modules/application/application.module';
+
+import { AppController } from './app.controller';
+
+@Module({
+  imports: [
+    ContentModule,
+    SkillModule,
+    JobModule,
+    DatabaseModule,
+    ProfileModule,
+    ApplicationModule,
+    ConfigModule.forRoot({ isGlobal: true }),
+  ],
+  controllers: [AppController],
+  providers: [],
+})
+export class AppModule {}
