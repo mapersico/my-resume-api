@@ -11,8 +11,6 @@ import { ApplicationModule } from 'src/modules/application/application.module';
 import { FileModule } from 'src/modules/file/file.module';
 import { ContactModule } from 'src/modules/contact/contact.module';
 
-import { AppController } from './app.controller';
-
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
@@ -25,7 +23,6 @@ import { AppController } from './app.controller';
     FileModule,
     ContactModule,
   ],
-  controllers: [AppController],
   providers: [],
 })
 export class AppModule {}
