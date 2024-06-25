@@ -1,8 +1,9 @@
-import { Controller, Get, Param, Query } from '@nestjs/common';
+import { Controller, Get, Headers, Param } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 
 import { ApplicationService } from './application.service';
-import { Application } from '../../core/database/entities';
 
+@ApiTags('applications')
 @Controller('applications')
 export class ApplicationController {
   constructor(private readonly applicationService: ApplicationService) {}
@@ -10,13 +11,13 @@ export class ApplicationController {
   @Get('get-by-code/:code')
   async getByCode(
     @Param('code') code: string,
-    @Query('lang') lang: string,
-  ): Promise<Application | null> {
+    @Headers('Language') lang: string,
+  ) {
     return await this.applicationService.getAppByCode(code, lang);
   }
 
   @Get('get-all')
-  async getAll(@Query('lang') lang: string): Promise<Application[]> {
+  async getAll(@Headers('Language') lang: string) {
     return await this.applicationService.getAllApplications(lang);
   }
 }
